@@ -4,8 +4,8 @@ name: my workflow
 
 on:
 jobs:
-  runs-on: ubuntu-latest
-  steps:
+    runs-on: ubuntu-latest
+    steps:
       - name: printing
         run: echo "hello world"
       - name: Run a multi-line script
