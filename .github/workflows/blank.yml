@@ -1,0 +1,12 @@
+name: my workflow
+on: workflow_call
+jobs:
+  firstjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: printing
+        run: echo "hello world"
+      - name: Run a multi-line script
+        run: |
+          echo "hi everybody"
+          echo "hi"
