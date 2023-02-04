@@ -1,5 +1,5 @@
 name: my workflow
-on: workflow_call
+on: workflow_run
 jobs:
   firstjob:
     runs-on: ubuntu-latest
