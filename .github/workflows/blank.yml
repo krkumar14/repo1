@@ -1,11 +1,9 @@
-# This is a basic workflow to help you get started with Actions
-
 name: my workflow
-
-on:
+on: workflow_call
 jobs:
     runs-on: ubuntu-latest
     steps:
+      firstjob:
       - name: printing
         run: echo "hello world"
       - name: Run a multi-line script
