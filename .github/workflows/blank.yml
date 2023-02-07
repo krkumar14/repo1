@@ -18,7 +18,7 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build . --file Dockerfile --tag my-image-name:v1
-        docker run -it my-image-name:v1 /bin/bash
+        docker run -d my-image-name:v1 
 
     - name: Upload image
       uses: ishworkh/docker-image-artifact-upload@v1
