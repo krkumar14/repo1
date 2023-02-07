@@ -24,7 +24,17 @@ jobs:
     - name: Upload image
       uses: ishworkh/docker-image-artifact-upload@v1
       with:
+        name: first_image
         image: "my-image-name:v1"
+  deploy:
   
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download image
+      uses: ishworkh/docker-image-artifact-download@v1
+      with:
+        name: first_image
+
+       
 
 
