@@ -16,6 +16,9 @@ jobs:
       run: |
         docker build . --file Dockerfile --tag my-image-name:v1
         docker run -d -p 80:80 my-image-name:v1 
+        pwd
+        ls
+        curl http://localhost:80
       
 
     - name: Upload image
