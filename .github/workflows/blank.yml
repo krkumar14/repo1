@@ -16,15 +16,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:v1
+      run: |
+        docker build . --file Dockerfile --tag my-image-name:v1
+        docker run -it my-image-name:v1 /bin/bash
 
     - name: Upload image
       uses: ishworkh/docker-image-artifact-upload@v1
       with:
         image: "my-image-name:v1"
-    - name: docker run
-      run: |
-        sudo apt install docker.io -y
-        docker run -it my-image-name:v1 /bin/bash
+  
 
 
