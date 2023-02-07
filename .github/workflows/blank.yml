@@ -17,8 +17,10 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-    - name: upload artifact
-      uses: actions/upload-artifact@v3
+
+    - name: Upload image
+      uses: ishworkh/docker-image-artifact-upload@v1
       with:
-        name: dist-files
-        path: dist
+        image: "my-image-name:$(date +%s)"
+
+
