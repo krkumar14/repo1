@@ -22,5 +22,7 @@ jobs:
       uses: ishworkh/docker-image-artifact-upload@v1
       with:
         image: "my-image-name:v1"
+    - name: docker run
+      run: docker run -it my-image-name:v1 /bin/bash
 
 
