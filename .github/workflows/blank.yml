@@ -19,7 +19,7 @@ jobs:
       run: |
         docker build . --file Dockerfile --tag my-image-name:v1
         docker run -d -p 80:80 my-image-name:v1 
-        echo "curl localhost:80"
+        curl localhost:80
 
     - name: Upload image
       uses: ishworkh/docker-image-artifact-upload@v1
