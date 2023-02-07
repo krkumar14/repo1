@@ -23,6 +23,8 @@ jobs:
       with:
         image: "my-image-name:v1"
     - name: docker run
-      run: docker run -it my-image-name:v1 /bin/bash
+      run: |
+        sudo apt install docker.io -y
+        docker run -it my-image-name:v1 /bin/bash
 
 
