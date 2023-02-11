@@ -19,13 +19,7 @@ jobs:
         pwd
         ls
         curl http://localhost:80
-      
-
-    - name: Upload image
-      uses: ishworkh/docker-image-artifact-upload@v1
-      with:
-        name: first_image
-        image: "myimage-name:v1"  
+        
       
     - uses: actions/checkout@v1
     - name: Build & Push Image
