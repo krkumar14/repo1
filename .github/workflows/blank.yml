@@ -25,7 +25,13 @@ jobs:
       uses: ishworkh/docker-image-artifact-upload@v1
       with:
         name: first_image
-        image: "myimage-name:v1"
- 
+        image: "myimage-name:v1"  
+      
+    - uses: actions/checkout@v1
+    - name: Build & Push Image
+      run: |
+        echo "${{ secrets.API_KEY }}" | docker login -u "rajudruva2@gmail.com" --password-stdin
+        docker image build -t myartifactory1405.jfrog.io/docker/myimage-name:v1 .
+        docker push myartifactory1405.jfrog.io/docker/myimage-name:v1 
 
 
