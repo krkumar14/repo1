@@ -15,10 +15,7 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build . --file Dockerfile --tag my-image-name:v1
-        docker run -d -p 80:80 myimage-name:v1 
-        pwd
-        ls
-        curl http://localhost:80
+        
         
       
     - uses: actions/checkout@v1
