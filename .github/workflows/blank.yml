@@ -21,7 +21,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build & Push Image
       run: |
-        echo "${{ secrets.API_KEY }}" | docker login -u "rajudruva2@gmail.com" --password-stdin
+        docker login -u "rajudruva2@gmail.com" --password "AKCp8nzM64jgChtdXWMa7AgPoADRhmzpyUxPNxDdGiRryZVe78J2BbfeoMMSQgMSFDxBbSLrD"
         docker image build -t myartifactory1405.jfrog.io/docker/myimage-name:v1 .
         docker push myartifactory1405.jfrog.io/docker/myimage-name:v1 
 
